@@ -1,5 +1,10 @@
 # Load plumber
 library(plumber)
+#* @filter cors
+function(req, res) {
+  res$setHeader("Access-Control-Allow-Origin", "*")
+  plumber::forward()
+}
 
 # Load your calculator code (must be in same folder)
 source("calculator_project.R")
