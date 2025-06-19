@@ -22,7 +22,7 @@ function(req, res) {
 #* @param age Age of the policyholder
 #* @param term Policy term (years); optional for whole life
 #* @param sum_assured Sum assured in rupees
-#* @param product Type of product: Term Assurance, Endowment Assurance, Pure Endowment, Whole Life
+#* @param product Type of product: term, endowment, pure_endowment, wholeLife
 #* @get /calculate
 function(age, term = 0, sum_assured, product = "term") {
   age <- as.numeric(age)
